@@ -1,0 +1,49 @@
+body, html{
+    margin: 0;
+    scroll-behavior: smooth;
+    background-color: rgb(21, 30, 40);
+}
+
+:root{
+
+}
+
+/* Global */
+a{
+    text-decoration: none;
+}
+
+
+/* Start Navbar */
+#navbar{
+    position: fixed;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: black;
+    width: 100%;
+}
+
+#navbar .left{
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#navbar .right{
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#navbar a{
+    color: white;
+}
+
+#navbar .link{
+    margin-left: 10px;
+    margin-right: 10px;
+}
