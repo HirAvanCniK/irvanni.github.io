@@ -7,7 +7,7 @@
     --primary-color: black;
     --secondary-color: #5500ff15;
     --color: #fff;
-    --margin-side: 10vw;
+    --margin-side: 15vw;
     --tj-theme-secondary: rgba(44, 45, 119, 0.5);
     --tj-theme-primary: #4d41b6;
     --tj-white: white;
@@ -343,6 +343,42 @@ section header .title{
     text-align: center;
 }
 
+#home header .btns{
+    width: 100%;
+    font-weight: bold;
+}
+
+#home header .download_btn{
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    border: 2px solid var(--tj-theme-primary);
+    color: var(--tj-theme-primary);
+    transition: .3s;
+}
+
+#home header .download_btn:hover{
+    color: var(--tj-white);
+    background-color: var(--tj-theme-primary);
+}
+
+#home header .social{
+    font-size: 17px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding: 10px 10px 10px 10px;
+    border-radius: 50px;
+    border: 2px solid var(--tj-theme-primary);
+    color: var(--tj-theme-primary);
+    transition: .3s;
+    margin-left: 20px;
+}
+
+#home header .social:hover{
+    color: var(--tj-white);
+    background-color: var(--tj-theme-primary);
+}
+
 #home footer{
     width: 80%;
     display: flex;
@@ -378,7 +414,7 @@ section header .title{
     color: transparent;
     position: absolute;
     z-index: 0;
-    font-size: 240px;
+    font-size: 340px;
     top: 50%;
     left: 50%;
     -webkit-text-stroke-width: 2px;
