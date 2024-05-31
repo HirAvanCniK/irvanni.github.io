@@ -114,6 +114,7 @@ article .project{
 
 .title {
     color: orange;
+    text-shadow: orangered 1px 0 10px;
     font-size: 40px;
 }
 
