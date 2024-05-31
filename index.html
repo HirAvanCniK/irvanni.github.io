@@ -1,102 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IRVANNI | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./static/css/style.css">
-    <link rel="shortcut icon" href="./static/imgs/pfp.png" type="image/x-icon">
+    <title>IRVANNI</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="left">
-            <img src="./static/imgs/pfp.png" alt="PFP" height="100%">
-            <a href="mailto:me@irvanni.it" class="link">me@irvanni.it</a>
-        </div>
-        <div class="right">
-            <a href="#services" class="link a">Services</a>
-            <a href="#works" class="link a">Works</a>
-            <a href="#resume" class="link a">Resume</a>
-            <a href="#skills" class="link a">Skills</a>
-            <a href="#contact" class="link a">Contact</a>
-            <a href="#home" class="link hire_me">Hire me!</a>
-        </div>
-    </nav>
-    <nav class="navbar nofixed">
-        <div class="left">
-            <img src="./static/imgs/pfp.png" alt="PFP" height="100%">
-            <a href="mailto:me@irvanni.it" class="link">me@irvanni.it</a>
-        </div>
-        <div class="right">
-            <a href="#services" class="link a">Services</a>
-            <a href="#works" class="link a">Works</a>
-            <a href="#resume" class="link a">Resume</a>
-            <a href="#skills" class="link a">Skills</a>
-            <a href="#contact" class="link a">Contact</a>
-            <a href="#home" class="link hire_me">Hire me!</a>
-        </div>
-    </nav>
-    <section id="home">
-        <h1 id="behind_text">HI</h1>
-        <header>
-            <div>
-                <h2 style="font-size: 30px; margin-bottom: 20px;">I am IRVANNI</h2>
-                <h1 class="linear-gradient-color" style="font-size: 50px; margin-top: 0;">Software Developer +<br>Web Developer +<br>Cyber Defender</h1>
-                <h3 style="color: rgb(255, 255, 255, .6);font-weight: normal; max-width: 470px;">I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people</h3>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+    <!-- scripts -->
+    <script src="static/js/particles.js"></script>
+    <script src="static/js/app.js"></script>
+    <div id="overlay"></div>
+
+    <article>
+        <h1 class="title" id="name"></h1>
+        <h1 class="sectiontitle">About me</h1>
+        <hr>
+        <h4 class="subtitle">
+            Hey there! I go by the name IRVANNI online, and I'm Andrea, an 18-year-old high school student. My love for
+            computer science, particularly backend development and cybersecurity, knows no bounds. During my free time,
+            I engage in numerous programming and cybersecurity competitions to fuel my passion further.
+        </h4>
+        <h1 class="sectiontitle">My projects</h1>
+        <hr>
+        <div class="project">
+            <h3 class="ptitle" onclick="toggleDescription(this)"><i class="fa-solid fa-angle-right"></i> PHP Webserver service</h3>
+            <div hidden>
                 <br>
-                <div class="btns">
-                    <a href="./static/attachments/cv.pdf" target="_blank" class="download_btn" file="Andrea Vanni CV.pdf" download>Download CV <i class="fa-solid fa-download"></i></a>
-                    <a href="https://twitter.com/AndreaVanni15" target="_blank" class="social"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="" target="_blank" class="social"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/HirAvanCniK" target="_blank" class="social"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://ctftime.org/user/127479" target="_blank" class="social"><i class="fa-brands fa-font-awesome"></i></a>
+                <p class="pdescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus elit in tincidunt luctus. Nullam sagittis tortor nulla, elementum mattis mauris rutrum eget. Aliquam dignissim tortor sem, ac fringilla augue molestie ut. Nam at pellentesque dolor, eu pharetra massa. Mauris porta tortor quis nisl pulvinar, et ornare lorem consectetur. Mauris tincidunt metus non ligula feugiat condimentum. Quisque non interdum neque. Nam eget urna urna. Cras neque turpis, sagittis vitae accumsan id, venenatis nec nisi. Praesent ullamcorper auctor nisi id ultrices.</p>
+                <br>
+                <div class="slider-container" id="p1">
+                    <div class="slider">
+                        <div class="slide"><img src="https://images.panda.org/assets/images/pages/welcome/orangutan_1600x1000_279157.jpg" alt="Project image 1"></div>
+                        <div class="slide"><img src="https://static.gettyimages.com/display-sets/creative-landing/images/GettyImages-1907862843.jpg" alt="Project image 2"></div>
+                        <div class="slide"><img src="https://media.springernature.com/lw703/springer-static/image/art%3A10.1038%2F528452a/MediaObjects/41586_2015_Article_BF528452a_Figg_HTML.jpg" alt="Project image 3"></div>
+                    </div>
+                    <div class="arrow left" onclick="slideLeft(this)"><i class="fa-solid fa-angle-left"></i></div>
+                    <div class="arrow right" onclick="slideRight(this)"><i class="fa-solid fa-angle-right"></i></div>
                 </div>
             </div>
-            <div>
-                <img class="img_of_me" src="https://www.mintface.xyz/content/images/2021/08/QmTndiF423kjdXsNzsip1QQkBQqDuzDhJnGuJAXtv4XXiZ-1.png" alt="Me" width="500" height="500">
+        </div>
+        <div class="project">
+            <h3 class="ptitle" onclick="toggleDescription(this)"><i class="fa-solid fa-angle-right"></i> Node.js Discord bot</h3>
+            <div hidden>
+                <br>
+                <p class="pdescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus elit in tincidunt luctus. Nullam sagittis tortor nulla, elementum mattis mauris rutrum eget. Aliquam dignissim tortor sem, ac fringilla augue molestie ut. Nam at pellentesque dolor, eu pharetra massa. Mauris porta tortor quis nisl pulvinar, et ornare lorem consectetur. Mauris tincidunt metus non ligula feugiat condimentum. Quisque non interdum neque. Nam eget urna urna. Cras neque turpis, sagittis vitae accumsan id, venenatis nec nisi. Praesent ullamcorper auctor nisi id ultrices.</p>
+                <br>
+                <div class="slider-container" id="p2">
+                    <div class="slider">
+                        <div class="slide"><img src="https://images.panda.org/assets/images/pages/welcome/orangutan_1600x1000_279157.jpg" alt="Project image 1"></div>
+                        <div class="slide"><img src="https://static.gettyimages.com/display-sets/creative-landing/images/GettyImages-1907862843.jpg" alt="Project image 2"></div>
+                        <div class="slide"><img src="https://media.springernature.com/lw703/springer-static/image/art%3A10.1038%2F528452a/MediaObjects/41586_2015_Article_BF528452a_Figg_HTML.jpg" alt="Project image 3"></div>
+                    </div>
+                    <div class="arrow left" onclick="slideLeft(this)"><i class="fa-solid fa-angle-left"></i></div>
+                    <div class="arrow right" onclick="slideRight(this)"><i class="fa-solid fa-angle-right"></i></div>
+                </div>
             </div>
-        </header>
-        <footer>
-            <span>
-                <h1>4</h1>
-                <h5>Years of Experience</h5>
-            </span>
-            <span>
-                <h1>20+</h1>
-                <h5>Project Completed</h5>
-            </span>
-            <!-- <span>
-                <h1>1.5K</h1>
-                <h5>Happy Clients</h5>
-            </span> -->
-        </footer>
-    </section>
-    <section id="services">
-        <header>
-            <h1 class="title linear-gradient-color">My Services</h1>
-        </header>
-    </section>
-    <section id="works">
-        <header>
-            <h1 class="title linear-gradient-color">My Recent Works</h1>
-        </header>
-    </section>
-    <section id="resume">
-        <header>
-            <h1 class="title linear-gradient-color">Resume</h1>
-        </header>
-    </section>
-    <section id="skills">
-        <header>
-            <h1 class="title linear-gradient-color">My Skills</h1>
-        </header>
-    </section>
-    <section id="contact">
-        <header>
-            <h1 class="title linear-gradient-color">Contact Me</h1>
-        </header>
-    </section>
-    <script src="./static/js/script.js"></script>
+        </div>
+        <h1 class="sectiontitle">Certifications</h1>
+        <hr>
+        <div id="certs">
+
+        </div>
+        <h1 class="sectiontitle">Prizes</h1>
+        <hr>
+        <div id="prizes">
+            
+        </div>
+        <h1 class="sectiontitle">Contact me</h1>
+        <hr>
+        <h3 style="width: 60%; text-align: left;">Email: <a href="mailto:vanniandrea244466666@gmail.com">vanniandrea244466666@gmail.com</a></h3>
+        <h3 style="width: 60%; text-align: left;">LinkedIn: <a href="https://www.linkedin.com/in/tuoprofilo">Andrea Vanni</a></h3>
+        
+
+    </article>
+    <script src="static/js/script.js"></script>
 </body>
+
 </html>
