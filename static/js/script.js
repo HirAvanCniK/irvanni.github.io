@@ -39,19 +39,15 @@ typingEffect();
 
 function toggleDescription(e){
     let d = e.parentNode.getElementsByTagName("div")[0];
+    d.parentNode.classList.toggle("opened");
     if(d.hidden){
         d.hidden = false;
     }else{
         d.hidden = true;
     }
     let icon = e.parentNode.getElementsByTagName("i")[0];
-    if(icon.classList.contains("fa-angle-right")){
-        icon.classList.remove("fa-angle-right");
-        icon.classList.add("fa-angle-down");
-    }else{
-        icon.classList.remove("fa-angle-down");
-        icon.classList.add("fa-angle-right");
-    }
+    icon.classList.toggle("fa-angle-right");
+    icon.classList.toggle("fa-angle-down");
 }
 
 let slidesIndexes = {};
