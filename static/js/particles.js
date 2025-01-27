@@ -75,12 +75,12 @@ var pJS = function (tag_id, params) {
                 enable: true,
                 speed: 2,
                 direction: 'none',
-                random: false,
-                straight: false,
+                random: true,
+                straight: true,
                 out_mode: 'out',
-                bounce: false,
+                bounce: true,
                 attract: {
-                    enable: false,
+                    enable: true,
                     rotateX: 3000,
                     rotateY: 3000
                 }

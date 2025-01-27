@@ -34,6 +34,20 @@ const typingEffect = async () => {
     revealCharacter(0, 0);
 }
 
+function calculateYears(d, m, y) {
+    let today = new Date();
+    let birthDate = new Date(y, m - 1, d);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    let todayMonth = today.getMonth();
+    let todayDay = today.getDate();
+    if (todayMonth < m - 1 || (todayMonth === m - 1 && todayDay < d)) {
+        age--;
+    }
+    return age;
+}
+
+document.getElementById("years").innerHTML = calculateYears(23, 5, 2006);
+
 
 typingEffect();
 

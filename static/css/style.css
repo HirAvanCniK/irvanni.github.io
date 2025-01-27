@@ -1,5 +1,5 @@
 :root{
-    --background-color: rgb(0, 0, 0);
+    --background-color: #1d212c;
     --main-color: rgb(7, 10, 44);
     --main-color-opacity: rgba(14, 21, 95, 0.5);
 
@@ -48,7 +48,7 @@ a{
 }
 
 #overlay {
-    background-color: transparent;
+    background-color: rgb(0, 0, 0, .8);
     position: fixed;
     height: 100%;
     width: 100%;
@@ -63,33 +63,75 @@ a{
 
 article {
     color: white;
-    text-align: center;
-    width: 60%;
     position: absolute;
-    top: 50px;
-    left: 50%;
-    bottom: 50px;
-    transform: translateX(-50%);
-    background-color: var(--main-color-opacity);
-    backdrop-filter: blur(10px);
-    border-radius: 10px 5px 5px 10px;
-    box-shadow: 0 0 7px 0.5px white;
-    padding: 50px;
+    width: 100%;
     display: grid;
     place-items: center;
-    overflow-y: auto;
 }
 
-article .subtitle,
-article .project{
-    max-width: 60%;
+#navbar {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 100px);
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#navbar * {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#navbar .link {
+    padding: 20px;
+}
+
+#navbar .link:hover {
+    color: cadetblue;
+}
+
+#navbar .btn {
+    text-decoration: none;
+    color: white;
+    background-color: var(--background-color);
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px 1px white;
+}
+
+#navbar .btn:hover {
+    box-shadow: 1px 1px 5px 1px white;
+}
+
+section {
+    padding-top: 50px;
+    text-align: center;
+    width: 40%;
+}
+
+section:not(#contactme) {
+    height: calc(100vh - 50px);
+}
+
+section .sectiontitle {
+    font-size: 30px;
+}
+
+section .sectionsubtitle {
+    font-size: 20px;
+}
+
+section p {
+    text-align: justify;
 }
 
 ::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
-	background-color: #F5F5F5;
-	border-radius: 10px;
+	background-color: var(--background-color);
 }
 
 ::-webkit-scrollbar
@@ -102,159 +144,27 @@ article .project{
 
 ::-webkit-scrollbar-thumb
 {
-    border-radius: 20px;
 	background-color: #FFF;
-    box-shadow: 0 0 10px 1px blue;
+    box-shadow: 0 0 10px 1px var(--background-color);
 	background-image: -webkit-gradient(linear,
 									   40% 0%,
 									   75% 84%,
-									   from(rgb(122,153,217)),
-									   to(rgb(73,125,189)),
-									   color-stop(.6,rgb(28,58,148)))
+									   from(#18274e),
+									   to(#11224d),
+									   color-stop(.6,#18274e))
 }
 
-.title {
-    color: orange;
-    text-shadow: orangered 1px 0 10px;
-    font-size: 40px;
+#contactme .social {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
 }
 
-.sectiontitle {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.hrtitle {
-    display: flex;
-    align-items: center;
-    width: 60%; /* Riduce la larghezza totale del container */
-    text-align: center;
-    margin: 20px auto; /* Centra il container */
-}
-
-.hrtitle::before,
-.hrtitle::after {
-    content: '';
-    flex-grow: 1;
-    height: 1px;
-    border-top: 2px dashed rgb(255, 255, 255, .9);
-}
-
-.hrtitle::before {
-    margin-right: 10px;
-}
-
-.hrtitle::after {
+#skills .pSkill {
+    width: 75px;
     margin-left: 10px;
-}
-
-.project {
-    border: none;
-    border-bottom: 2px solid white;
-    width: 50%;
-    padding: 20px;
-    text-align: center;
-}
-
-.project.opened{
-    border: 2px solid white;
-    margin-bottom: 20px;
-}
-
-.project:hover {
-    background-color: rgb(255, 255, 255, .2);
-    cursor: pointer;
-}
-
-.project .ptitle {
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    border: none;
-}
-
-.project .pdescription {
-    padding: 0;
-    border: none;
-    margin: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: justify;
-}
-
-.project div {
-    overflow: hidden;
-}
-
-.slider-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.slider {
-    display: flex;
-    align-items: center;
-    transition: transform 0.5s ease;
-}
-
-.slider img {
-    width: calc(100% - 100px);
-}
-
-.slide {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 24px;
-}
-
-.arrow.left {
-    left: 10px;
-}
-
-.arrow.right {
-    right: 10px;
-}
-
-.nowrap {
-    text-wrap: nowrap;
-}
-
-
-@media screen and (max-width: 1024px) {
-    article .subtitle,
-    article hr,
-    article .project {
-        max-width: 100%;
-    }
-
-    *{
-        font-size: 95%;
-    }
-
-    .hrtitle {
-        width: 100%;
-    }
-    
-}
-
-@media screen and (max-width: 480px) {
-    * {
-        font-size: 90%;
-    }
-
-    .nowrap {
-        font-size: 80%;
-    }
-
-    .project {
-        width: 90%;
-    }
+    margin-right: 10px;
+    margin-bottom: 50px;
 }
