@@ -163,8 +163,68 @@ section p {
 }
 
 #skills .pSkill {
-    width: 75px;
+    width: 10%;
+    min-width: 40px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 50px;
+}
+
+#linksBtn {
+    display: none;
+    font-size: 20px;
+}
+
+.open {
+    animation: forwards scrolldown .2s;
+}
+
+@media screen and (max-width: 1024px) {
+    section {
+        width: 90%;
+    }
+
+    section:not(#contactme) {
+        height: auto;
+    }
+
+    #linksBtn {
+        display: flex;
+    }
+
+    .right {
+        position: fixed;
+        background-color: rgb(0, 0, 0, .95);
+        display: grid;
+        place-items: center;
+        width: 100%;
+        left: 0;
+        top: -100%;
+        z-index: -1;
+    }
+
+    .right .link{
+        width: 100%;
+        text-align: center;
+    }
+
+    #navbar {
+        padding-left: 30px;
+        padding-right: 30px;
+        width: calc(100% - 60px);
+    }
+
+    #navbar .btn {
+        font-size: 10px;
+    }
+}
+
+@keyframes scrolldown {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 60px;
+    }
 }

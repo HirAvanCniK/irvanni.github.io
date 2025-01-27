@@ -24,6 +24,7 @@
                     Download CV
                 </a>
             </div>
+            <i class="fa-solid fa-bars" id="linksBtn"></i>
             <div class="right">
                 <a href="#about" class="link bold">About me</a>
                 <a href="#skills" class="link bold">Skills</a>
@@ -35,7 +36,7 @@
         </nav>
         <section id="about">
             <h1 class="sectiontitle">About me</h1>
-            <img src="static/imgs/pfp.png" height="400" width="400" style="border-radius:50%;" alt="">
+            <img src="static/imgs/pfp.png" style="border-radius:50%;width:100%;max-height:400px;max-width:400px;" alt="">
             <p>
                 Hello!
                 I'm IRVANNI (online alias) and my name is Andrea. I'm an Italian enthusiast deeply passionate about computer science, 
@@ -52,17 +53,17 @@
             <img src="static/imgs/html.png" class="pSkill" alt="">
             <img src="static/imgs/css.png" class="pSkill" alt="">
             <img src="static/imgs/nodejs.png" class="pSkill" alt="">
-            <img src="static/imgs/laravel.png" class="pSkill" alt="">
+            <img src="static/imgs/express-js.png" class="pSkill" alt="">
             <img src="static/imgs/c++.png" class="pSkill" alt="">
             <img src="static/imgs/c.png" class="pSkill" alt="">
             <img src="static/imgs/php.png" class="pSkill" alt="">
+            <img src="static/imgs/laravel.png" class="pSkill" alt="">
             <img src="static/imgs/sql.png" class="pSkill" alt="">
             <img src="static/imgs/java.png" class="pSkill" alt="">
             <img src="static/imgs/bash.png" class="pSkill" alt="">
             <img src="static/imgs/python.png" class="pSkill" alt="">
-            <img src="static/imgs/assembly.png" class="pSkill" alt="">
             <img src="static/imgs/flask.png" class="pSkill" alt="">
-            <img src="static/imgs/express-js.png" class="pSkill" alt="">
+            <img src="static/imgs/assembly.png" class="pSkill" alt="">
             <p>
                 In addition to my proficiency in various programming languages and frameworks, 
                 I possess strong <b>problem-solving skills</b>, which enable me to tackle complex challenges 
@@ -95,75 +96,6 @@
             <a href="https://hackerone.com/irvanni"><img src="static/imgs/hackerone.png" class="social" alt=""></a>
         </section>
     </article>
-    <!-- <article>
-        <h1 class="title" id="name"></h1>
-        <div class="hrtitle">
-            <h1 class="sectiontitle">About me</h1>
-        </div>
-        <h4 class="subtitle">
-            Hey there! I go by the name IRVANNI online, and I'm Andrea, an <i id="years"></i>-year-old high school student. My love for
-            computer science, particularly backend development and cybersecurity, knows no bounds. During my free time,
-            I engage in numerous programming and cybersecurity competitions to fuel my passion further.
-        </h4>
-        
-        <div class="hrtitle">
-            <h1 class="sectiontitle">Skills</h1>
-        </div>
-        <div class="hrtitle">
-            <h1 class="sectiontitle">My projects</h1>
-        </div>
-        <div class="project">
-            <h3 class="ptitle" onclick="toggleDescription(this)"><i class="fa-solid fa-angle-right"></i> PHP Webserver service</h3>
-            <div hidden>
-                <br>
-                <p class="pdescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus elit in tincidunt luctus. Nullam sagittis tortor nulla, elementum mattis mauris rutrum eget. Aliquam dignissim tortor sem, ac fringilla augue molestie ut. Nam at pellentesque dolor, eu pharetra massa. Mauris porta tortor quis nisl pulvinar, et ornare lorem consectetur. Mauris tincidunt metus non ligula feugiat condimentum. Quisque non interdum neque. Nam eget urna urna. Cras neque turpis, sagittis vitae accumsan id, venenatis nec nisi. Praesent ullamcorper auctor nisi id ultrices.</p>
-                <br>
-                <div class="slider-container" id="p1">
-                    <div class="slider">
-                        <div class="slide"><img src="https://images.panda.org/assets/images/pages/welcome/orangutan_1600x1000_279157.jpg" alt="Project image 1"></div>
-                        <div class="slide"><img src="https://static.gettyimages.com/display-sets/creative-landing/images/GettyImages-1907862843.jpg" alt="Project image 2"></div>
-                        <div class="slide"><img src="https://media.springernature.com/lw703/springer-static/image/art%3A10.1038%2F528452a/MediaObjects/41586_2015_Article_BF528452a_Figg_HTML.jpg" alt="Project image 3"></div>
-                    </div>
-                    <div class="arrow left" onclick="slideLeft(this)"><i class="fa-solid fa-angle-left"></i></div>
-                    <div class="arrow right" onclick="slideRight(this)"><i class="fa-solid fa-angle-right"></i></div>
-                </div>
-            </div>
-        </div>
-        <div class="project">
-            <h3 class="ptitle" onclick="toggleDescription(this)"><i class="fa-solid fa-angle-right"></i> Node.js Discord bot</h3>
-            <div hidden>
-                <br>
-                <p class="pdescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus elit in tincidunt luctus. Nullam sagittis tortor nulla, elementum mattis mauris rutrum eget. Aliquam dignissim tortor sem, ac fringilla augue molestie ut. Nam at pellentesque dolor, eu pharetra massa. Mauris porta tortor quis nisl pulvinar, et ornare lorem consectetur. Mauris tincidunt metus non ligula feugiat condimentum. Quisque non interdum neque. Nam eget urna urna. Cras neque turpis, sagittis vitae accumsan id, venenatis nec nisi. Praesent ullamcorper auctor nisi id ultrices.</p>
-                <br>
-                <div class="slider-container" id="p2">
-                    <div class="slider">
-                        <div class="slide"><img src="https://images.panda.org/assets/images/pages/welcome/orangutan_1600x1000_279157.jpg" alt="Project image 1"></div>
-                        <div class="slide"><img src="https://static.gettyimages.com/display-sets/creative-landing/images/GettyImages-1907862843.jpg" alt="Project image 2"></div>
-                        <div class="slide"><img src="https://media.springernature.com/lw703/springer-static/image/art%3A10.1038%2F528452a/MediaObjects/41586_2015_Article_BF528452a_Figg_HTML.jpg" alt="Project image 3"></div>
-                    </div>
-                    <div class="arrow left" onclick="slideLeft(this)"><i class="fa-solid fa-angle-left"></i></div>
-                    <div class="arrow right" onclick="slideRight(this)"><i class="fa-solid fa-angle-right"></i></div>
-                </div>
-            </div>
-        </div>
-        <div class="hrtitle">
-            <h1 class="sectiontitle">Certifications</h1>
-        </div>
-        <div id="certs">
-
-        </div>
-        <div class="hrtitle">
-            <h1 class="sectiontitle">Prizes</h1>
-        </div>
-        <div id="prizes">
-            
-        </div>
-        <div class="hrtitle">
-            <h1 class="sectiontitle">Contact me</h1>
-        </div>
-        <h3 class="nowrap">Email: <a href="mailto:vanniandrea244466666@gmail.com">vanniandrea244466666@gmail.com</a></h3>
-        <h3 class="nowrap">LinkedIn: <a href="https://www.linkedin.com/in/tuoprofilo">Andrea Vanni</a></h3>
-    </article> -->
     <script src="static/js/script.js"></script>
 </body>
 
