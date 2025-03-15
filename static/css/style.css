@@ -796,6 +796,10 @@ section:hover {
   width: 100%;
 }
 
+.prize-item.expanded .expand-indicator {
+  transform: rotate(180deg);
+}
+
 /* ===== CONTACT SECTION ===== */
 #contactme {
   display: flex;

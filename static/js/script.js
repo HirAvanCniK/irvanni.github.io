@@ -227,80 +227,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Project filter functionality
-  const createProjectFilter = () => {
-    const projectsSection = document.getElementById("projects");
-    const filterContainer = document.createElement("div");
-    filterContainer.className = "project-filters";
-
-    const filters = [
-      { name: "All", filter: "*" },
-      { name: "Web", filter: "web" },
-      { name: "Security", filter: "security" },
-      { name: "Mobile", filter: "mobile" },
-    ];
-
-    filters.forEach((filter) => {
-      const button = document.createElement("button");
-      button.className = "filter-btn";
-      button.textContent = filter.name;
-      button.dataset.filter = filter.filter;
-
-      if (filter.filter === "*") button.classList.add("active");
-
-      button.addEventListener("click", () => {
-        document.querySelectorAll(".filter-btn").forEach((btn) => btn.classList.remove("active"));
-        button.classList.add("active");
-
-        const projectItems = document.querySelectorAll(".project-item");
-        projectItems.forEach((item) => {
-          if (filter.filter === "*") {
-            item.style.display = "flex";
-            setTimeout(() => {
-              item.style.opacity = "1";
-              item.style.transform = "";
-            }, 100);
-          } else {
-            const tags = item.querySelectorAll(".project-tag");
-            let hasTag = false;
-
-            tags.forEach((tag) => {
-              if (tag.textContent.toLowerCase().includes(filter.filter)) hasTag = true;
-            });
-
-            if (hasTag) {
-              item.style.display = "flex";
-              setTimeout(() => {
-                item.style.opacity = "1";
-                item.style.transform = "";
-              }, 100);
-            } else {
-              item.style.opacity = "0";
-              item.style.transform = "translateY(20px)";
-              setTimeout(() => (item.style.display = "none"), 300);
-            }
-          }
-        });
-      });
-
-      filterContainer.appendChild(button);
-    });
-
-    const sectionTitle = projectsSection.querySelector(".sectiontitle");
-    sectionTitle.after(filterContainer);
-
-    const style = document.createElement("style");
-    style.textContent = `
-      .project-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
-      .filter-btn { background-color: transparent; border: 1px solid rgba(255, 255, 255, 0.1); color: #8892b0; padding: 8px 15px; border-radius: 20px; cursor: pointer; transition: all 0.3s ease; font-size: 14px; }
-      .filter-btn:hover, .filter-btn.active { background-color: rgba(100, 255, 218, 0.1); color: #64ffda; border-color: #64ffda; }
-      .project-item { transition: opacity 0.3s ease, transform 0.3s ease; }
-    `;
-    document.head.appendChild(style);
-  };
-
-  createProjectFilter();
-
   // View more projects button
   const addViewMoreButton = () => {
     const projectsSection = document.getElementById("projects");
@@ -344,97 +270,77 @@ document.addEventListener("DOMContentLoaded", function () {
 
   addViewMoreButton();
 
-  // Funzionalità di espansione per certificazioni
+  // Expansion functionality for certifications
   certItems.forEach((item) => {
-    // Modifica la struttura DOM per aggiungere l'icona di espansione
     const header = document.createElement("div");
     header.className = "cert-header";
 
-    // Sposta i titoli all'interno dell'header
     const title = item.querySelector("h3");
     const date = item.querySelector(".cert-date");
 
-    // Contenitore per titolo e data
     const titleContainer = document.createElement("div");
     titleContainer.appendChild(title.cloneNode(true));
     titleContainer.appendChild(date.cloneNode(true));
 
-    // Rimuovi gli originali
     title.remove();
     date.remove();
 
-    // Crea l'indicatore di espansione
     const expandIndicator = document.createElement("i");
     expandIndicator.className = "fas fa-chevron-down expand-indicator";
 
-    // Assembla l'header
     header.appendChild(titleContainer);
     header.appendChild(expandIndicator);
 
-    // Inserisci l'header all'inizio del contenuto della certificazione
     const certContent = item.querySelector(".cert-content");
     certContent.insertBefore(header, certContent.firstChild);
 
-    // Aggiungi l'evento click per espandere/collassare
     item.addEventListener("click", () => {
-      // Chiudi tutte le altre certificazioni
       certItems.forEach((otherItem) => {
         if (otherItem !== item && otherItem.classList.contains("expanded")) {
           otherItem.classList.remove("expanded");
         }
       });
 
-      // Espandi/collassa questa certificazione
       item.classList.toggle("expanded");
     });
   });
 
-  // Funzionalità di espansione per premi
+  // Expansion functionality for prizes
   prizeItems.forEach((item) => {
-    // Modifica la struttura DOM per aggiungere l'icona di espansione
     const header = document.createElement("div");
     header.className = "prize-header";
 
-    // Sposta i titoli all'interno dell'header
     const title = item.querySelector("h3");
     const date = item.querySelector(".prize-date");
 
-    // Contenitore per titolo e data
     const titleContainer = document.createElement("div");
     titleContainer.appendChild(title.cloneNode(true));
     titleContainer.appendChild(date.cloneNode(true));
 
-    // Rimuovi gli originali
     title.remove();
     date.remove();
 
-    // Crea l'indicatore di espansione
     const expandIndicator = document.createElement("i");
     expandIndicator.className = "fas fa-chevron-down expand-indicator";
 
-    // Assembla l'header
     header.appendChild(titleContainer);
     header.appendChild(expandIndicator);
 
-    // Inserisci l'header all'inizio del contenuto del premio
     const prizeContent = item.querySelector(".prize-content");
     prizeContent.insertBefore(header, prizeContent.firstChild);
 
-    // Aggiungi l'evento click per espandere/collassare
     item.addEventListener("click", () => {
-      // Chiudi tutti gli altri premi
       prizeItems.forEach((otherItem) => {
         if (otherItem !== item && otherItem.classList.contains("expanded")) {
           otherItem.classList.remove("expanded");
         }
       });
 
-      // Espandi/collassa questo premio
       item.classList.toggle("expanded");
     });
   });
 
-  // Apri la prima certificazione e il primo premio di default
+  // Open the first certification and the first default award
   if (certItems.length > 0) {
     certItems[0].classList.add("expanded");
   }
