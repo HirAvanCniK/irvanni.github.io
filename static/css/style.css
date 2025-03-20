@@ -1271,3 +1271,10 @@ section:hover {
     height: 150px;
   }
 }
+
+footer {
+  background-color: rgba(17, 34, 64, 0.75);
+  color: #64ffda;
+  padding: 20px;
+  text-align: center;
+}
